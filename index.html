@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kalkulator kosztu komputera</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <h1>Kalkulator kosztu komputera</h1>
+    <form>
+      <label for="cpu">Procesor:</label>
+      <select id="cpu" required>
+        <option value="0" disabled selected>Wybierz procesor</option>
+        <option value="499">Intel i3-12100F (499zł)</option>
+        <option value="599">Intel i3-13100F (599zł)</option>
+        <option value="639">Intel i5-11400F (639zł)</option>
+        <option value="799">Intel Core i5-12400F (799zł)</option>
+        <option value="1619">Intel Core i7-12700F (1619zł)</option>
+        <option value="2129">Intel Core i7-13700KF (2129zł)</option>
+      </select><br>
+      
+      <label for="mobo">Płyta główna:</label>
+      <select id="mobo" required>
+        <option value="0" disabled selected>Wybierz płytę główną</option>
+        <option value="329">Gigabyte H510M H (329zł)</option>
+        <option value="340">ASUS PRIME H510M-D (340zł)</option>
+        <option value="639">ASRock H510 PRO BTC+ (639zł)</option>
+        <option value="899">ASUS TUF GAMING Z590-PLUS WI-FI (899zł)</option>
+        <option value="969">Gigabyte Z690 GAMING X DDR4 (969zł)</option>
+        <option value="1700">Gigabyte Z790 AORUS ELITE AX (1700zł)</option>
+      </select><br>
+
+      <label for="gpu">Karta graficzna:</label>
+      <select id="gpu" required>
+        <option value="0" disabled selected>Wybierz kartę graficzną</option>
+        <option value="870">Nvidia GTX 1650 (870zł)</option>
+        <option value="1249">Nvidia GTX 1660 SUPER (1249zł)</option>
+        <option value="1429">Nvidia RTX 3050 (1429zł)</option>
+        <option value="1689">Nvidia RTX 3060 (1689zł)</option>
+        <option value="2899">Nvidia RTX 3070 (2899zł)</option>
+        <option value="969">MSI Radeon RX 6500 XT (969zł)</option>
+        <option value="1359">Radeon RX 6600  (1359zł)</option>
+      </select><br>
+
+      <label for="ram">Pamięć RAM:</label>
+      <select id="ram" required>
+        <option value="0" disabled selected>Wybierz pamięć RAM DDR4</option>
+        <option value="100">8 GB (100zł)</option>
+        <option value="230">16 GB (230zł)</option>
+        <option value="400">32 GB (400zł)</option>
+        <option value="770">64 GB (770zł)</option>
+      </select><br>
+
+      <label for="hdd">Dysk twardy:</label>
+      <select id="hdd">
+        <option value="0" disabled selected>Wybierz dysk twardy</option>
+        <option value="0">brak</option>
+        <option value="100">500 GB (100zł)</option>
+        <option value="189">1 TB (189zł)</option>
+        <option value="249">2 TB (249zł)</option>
+        <option value="469">4 TB (469zł)</option>
+      </select><br>
+      
+      <label for="ssd">Dysk SSD:</label>
+      <select id="ssd">
+        <option value="0" disabled selected>Wybierz dysk SSD</option>
+        <option value="0">brak</option>
+        <option value="249">500 GB (249zł)</option>
+        <option value="300">1 TB (300zł)</option>
+      </select><br>
+
+      <label for="psu">Zasilacz:</label>
+      <select id="psu" required>
+        <option value="0" disabled selected>Wybierz zasilacz</option>
+        <option value="249">be quiet! System Power 9 500W (249zł)</option>
+        <option value="299">Thermaltake Smart BM1 600W (299zł)</option>
+        <option value="399">be quiet! System Power 9 CM 700W (399zł)</option>
+        <option value="839">be quiet! Straight Power 11 850W (839zł)</option>
+      </select><br>
+
+      <input type="button" class="button" value="Oblicz koszt" onclick="calculateTotal()">
+      <input type="reset" class="button" value="Resetuj" onclick="resetForm()">
+      
+    </form>
+    <form>
+    <p id="totalCost"></p>
+    </form>
+    
+    
+
+    <script src="script.js"></script>
+    
+  </body>
+</html>
